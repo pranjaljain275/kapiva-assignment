@@ -10,25 +10,29 @@ class Home extends StatefulWidget {
 }
 
 class _HomePageState extends State<Home> {
+  // The dynamic keyword indicates that the list can store values of any type,
+  // and the list is initially empty (no elements).
   List<dynamic> dataList = [];
   bool isLoading = false;
 
   @override
   void initState() {
-    super.initState();
+    super.initState(); // to correctly initialize the state of the widget.
     fetchData();
   }
 
+  // Future<void> type represents a future that doesn't return a value.
+  // It is commonly used when working with asynchronous operations that don't produce a result
   Future<void> fetchData() async {
     setState(() {
       isLoading = true;
     });
 
-    final url = 'https://yif-library-be.onrender.com/book';
-    final response = await http.get(Uri.parse(url));
+    const fetchURL = 'https://yif-library-be.onrender.com/book';
+    final res = await http.get(Uri.parse(fetchURL));
 
-    if (response.statusCode == 200) {
-      final data = json.decode(response.body);
+    if (res.statusCode == 200) {
+      final data = json.decode(res.body);
       setState(() {
         dataList = data;
         isLoading = false;
@@ -43,8 +47,8 @@ class _HomePageState extends State<Home> {
         context: context,
         builder: (BuildContext context) {
           return AlertDialog(
-            title: Text('Error'),
-            content: Text('Failed to fetch data'),
+            title: Text('Error Occured'),
+            content: Text('Something went wrong'),
             actions: [
               TextButton(
                 child: Text('OK'),
@@ -67,10 +71,10 @@ class _HomePageState extends State<Home> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Flutter Node App'),
+        title: const Text('Flutter App'),
       ),
       body: isLoading
-          ? Center(
+          ? const Center(
               child: CircularProgressIndicator(),
             )
           : RefreshIndicator(
