@@ -112,7 +112,7 @@ Widget _displayListData(Map<String, dynamic> item) {
       ),
       child: Center(
         child: Text(
-          item['bookName'],
+          'Book Name' + item['bookName'],
           style: const TextStyle(
             color: Colors.blue,
             fontSize: 20,
@@ -127,7 +127,7 @@ Widget _displayListData(Map<String, dynamic> item) {
       ),
       child: Center(
         child: Text(
-          item['authorName'],
+          'Author Name' + item['authorName'],
           style: const TextStyle(
             color: Colors.blueGrey,
             fontSize: 14,
