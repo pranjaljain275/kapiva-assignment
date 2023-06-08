@@ -56,8 +56,8 @@ The app uses Flutter's `http` package to make HTTP requests to a specific API en
 - dotenv
 - mongoose
 
-## POSTMAN API Documentation
-- https://documenter.getpostman.com/view/24247750/2s93mAUfPU
-
 ## Backend Deploy
 - https://yif-library-be.onrender.com/
+
+## Flutter App Deploy
+- https://flutter-app-275.netlify.app/
