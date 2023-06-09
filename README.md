@@ -13,6 +13,16 @@ The app uses Flutter's `http` package to make HTTP requests to a specific API en
 - https://docs.flutter.dev/
 - https://dart.dev/guides
 
+## Project Detailing
+- First create a MyApp class statelesswidget widget that will run the app in main function.
+- Create a superclass for the subclass wedget by key which is used to uniquely identify widgets.
+- `Override` - A method in a subclass is intended to override a method with the same name in its superclass.
+- build widget return MaterialApp which contain the title , theme and home section of app.
+- Home extends the statefulwidget for updating the change of project by its state wth `setState` method after correctly initialize the state of the widget by `initState`.
+- Check for loading indicator.
+- Check for error while fetch or server error.
+- Fetch the data from api by get method created in node backend in the form of list by returning `ListTile` which contain title and subtitle with some styling in it.
+
 ## Features
 - Fetches data from a Node.js backend using HTTP GET request.
 - Parses the JSON response received from the backend.

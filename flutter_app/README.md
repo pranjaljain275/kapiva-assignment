@@ -1,16 +1,41 @@
-# nodeapp
+## Flutter App: Fetch Data from Node.js Backend
+This is a Flutter application that fetches data from a Node.js backend and displays it in a list. 
+The app uses Flutter's `http` package to make HTTP requests to a specific API endpoint in the Node.js backend.
 
-A new Flutter project.
+## Requirements
+- Flutter SDK
+- Node.js
+- Visual Studio Code
 
-## Getting Started
+## Resources
+- https://docs.flutter.dev/
+- https://dart.dev/guides
 
-This project is a starting point for a Flutter application.
+## Project Detailing
+- First create a MyApp class statelesswidget widget that will run the app in main function.
+- Create a superclass for the subclass wedget by key which is used to uniquely identify widgets.
+- `Override` - A method in a subclass is intended to override a method with the same name in its superclass.
+- build widget return MaterialApp which contain the title , theme and home section of app.
+- Home extends the statefulwidget for updating the change of project by its state wth `setState` method after correctly initialize the state of the widget by `initState`.
+- Check for loading indicator.
+- Check for error while fetch or server error.
+- Fetch the data from api by get method created in node backend in the form of list by returning `ListTile` which contain title and subtitle with some styling in it.
 
-A few resources to get you started if this is your first Flutter project:
+## Features
+- Fetches data from a Node.js backend using HTTP GET request.
+- Parses the JSON response received from the backend.
+- Displays the fetched data in a list view.
+- Implements pull-to-refresh functionality to manually update the data. `Refresh Indicator`
+- Implements error handling to display a message in case of network or server errors.
+- Implements loading indicators to show the progress of data fetching and refreshing. `Circular Progress Indicator`
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Dependencies
+- http: ^0.13.4
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Directory Structure
+- `lib/` - Contains the main Dart code for the Flutter app.
+- `main.dart` - Entry point of the Flutter app.
+- `home.dart` - Display the home page widget of the project.
+- Other Dart files for widgets, screens, or utilities.
+- `pubspec.yaml` - Defines the Flutter project's dependencies.
+
