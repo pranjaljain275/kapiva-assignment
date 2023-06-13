@@ -11,7 +11,7 @@ app.use(express.json());
 app.use("/book", bookRoute);
 
 app.get("/", (req, res) => {
-  res.send("Welcome to Youth India Foundation");
+  res.send("Welcome to Kapiva");
 });
 
 app.listen(process.env.port, async () => {
